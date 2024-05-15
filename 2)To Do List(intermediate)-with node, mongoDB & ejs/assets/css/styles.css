@@ -1,0 +1,184 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "poppins", sans-serif;
+  box-sizing: border-box;
+}
+
+/* for whole page  */
+.container {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #cf9aff, #95ceff);
+  padding: 10px;
+}
+
+/* for the main coantainer */
+.todo-app {
+  width: 100%;
+  max-width: 540px;
+  background: #fff;
+  border-radius: 10px;
+  margin: 100px auto 20px;
+  padding: 40px 30px 70px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.todo-app h2 {
+  color: #002765;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.list-img {
+  width: 28px;
+  /* height: 2.5rem; */
+  margin-left: 10px;
+}
+hr {
+  border: 1px solid #002765;
+  margin: 2px;
+  width: 100%;
+  opacity: 0.2;
+}
+
+/* for the input field */
+.row {
+  display: inline-block;
+  margin-bottom: 10px;
+  width: 100%;
+  height: 5rem;
+}
+
+.txt-div {
+  display: flex;
+  background-color: #eee;
+  margin-left: 15px;
+  width: 90%;
+  height: 3rem;
+  padding: 2px 15px;
+  border-radius: 10px;
+}
+
+.txt-input {
+  font-size: large;
+  border: none;
+  outline: none;
+  background-color: #eee;
+}
+
+.date-div {
+  display: flex;
+  justify-content: center;
+  background-color: #eee;
+  margin-top: 6px;
+  margin-left: 15px;
+  width: 40%;
+  height: 2.5rem;
+  padding: 2px 5px;
+  border-radius: 10px;
+}
+
+.date-input {
+  font-size: medium;
+  color: #555;
+  border: none;
+  outline: none;
+  background-color: #eee;
+}
+
+.button {
+  position: relative;
+  background-color: #eee;
+  border: none;
+  padding: auto;
+  top: -2.2rem;
+  margin-left: 60%;
+  font-size: 1rem;
+  width: 7em;
+  height: 2em;
+  border-radius: 1rem;
+  color: lightcoral;
+  box-shadow: 0 0.1rem #dfd9d9;
+  cursor: pointer;
+}
+
+.button:active {
+  color: white;
+  box-shadow: 0 0.2rem #dfd9d9;
+  transform: translateY(0.2rem);
+}
+
+.button:hover:not(:disabled) {
+  background: lightcoral;
+  color: white;
+  text-shadow: 0 0.1rem #bcb4b4;
+}
+
+.button:disabled {
+  cursor: auto;
+  color: grey;
+}
+
+/* for the list container  */
+ul {
+  margin-top: 15px;
+}
+
+ul li {
+  list-style: none;
+  font-style: 17px;
+  padding: 12px 8px 12px 50px;
+  user-select: none;
+  cursor: pointer;
+  position: relative;
+}
+ul li::before {
+  content: "";
+  position: absolute;
+  height: 23px;
+  width: 23px;
+  border-radius: 50%;
+  background-image: url(../images/unchecked.png);
+  background-size: cover;
+  background-position: center;
+  top: 22px;
+  left: 12px;
+}
+
+ul li.checked p {
+  color: #555;
+  text-decoration: line-through;
+}
+ul li.checked::before {
+  background-image: url(../images/checked.png);
+}
+
+ul li p.date {
+  opacity: 0.5;
+}
+
+ul li img.calendar-img {
+  margin: 5px 5px 0 0;
+  width: 20px;
+  height: 20px;
+  font-size: 22px;
+  line-height: 40px;
+  cursor: pointer;
+  /* border-radius: 50%; */
+}
+
+ul li img.delete-img {
+  position: absolute;
+  right: 0;
+  top: 18px;
+  width: 30px;
+  height: 30px;
+  font-size: 22px;
+  line-height: 40px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+ul li img:hover {
+  background-color: #edeef0;
+}
